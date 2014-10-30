@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+development:
+  <<: *default
+  database: finsight
+  host: localhost
+
+test:
+  <<: *default
+  database: finsight_test
+  host: localhost
+
+staging:
+  <<: *default
+  database: finsight
+  host: localhost
+
+production:
+  <<: *default
+  database: finsight
+  host: localhost
