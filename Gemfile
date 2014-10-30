@@ -10,6 +10,7 @@ gem 'unicorn'
 
 group :development do
   gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
   gem 'sdoc', '~> 0.4.0'
   gem 'spring'
 end
