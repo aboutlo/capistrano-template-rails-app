@@ -1,6 +1,7 @@
 # Set the working application directory
 # working_directory "/path/to/your/app"
 working_directory "/home/deploy/finsight.io"
+preload_app true
 
 # Unicorn PID file location
 # pid "/path/to/pids/unicorn.pid"
@@ -21,3 +22,13 @@ worker_processes 2
 
 # Time-out
 timeout 30
+
+before_fork do |server, worker|
+  defined?(ActiveRecord::Base) and
+    ActiveRecord::Base.connection.disconnect!
+end
+
+after_fork do |server, worker|
+  defined?(ActiveRecord::Base) and
+    ActiveRecord::Base.establish_connection
+end
