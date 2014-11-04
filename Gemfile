@@ -11,6 +11,8 @@ gem 'unicorn'
 group :development do
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
   gem 'sdoc', '~> 0.4.0'
   gem 'spring'
 end
