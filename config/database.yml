@@ -11,20 +11,3 @@ test:
   <<: *default
   database: finsight_test
   host: localhost
-
-vagrant:
-  <<: *default
-  database: finsight
-  host: localhost
-  name: db_user
-  password: 12345678 #TODO weak password change it !
-
-staging:
-  <<: *default
-  database: finsight
-  host: localhost
-
-production:
-  <<: *default
-  database: finsight
-  host: localhost
