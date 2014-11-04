@@ -10,7 +10,7 @@ set :repo_url, "git@bitbucket.org:aboutlo/finsight.io"
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, "/home/deploy/#{fetch(:application)}"
+set :deploy_to, "/home/deploy/apps/#{fetch(:application)}"
 
 # Default value for :format is :pretty
 # set :format, :pretty
