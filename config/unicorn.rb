@@ -1,10 +1,12 @@
 #https://github.com/tablexi/capistrano3-unicorn/blob/master/examples/unicorn.rb
-app_path = "#{fetch(:deploy_to)}"
-working_directory "#{app_path}/current"
-pid               "#{app_path}/current/tmp/pids/unicorn.pid"
+# TODO move into infrastructure project
+app_path = "/home/deploy/apps/finsight"
+working_directory "#{app_path}/current" # TODO point to shared directory
+pid               "#{app_path}/shared/tmp/pids/unicorn.pid"
 
 # listen
-listen "#{working_directory}/tmp/sockets/unicorn.sock", :backlog => 64
+listen "#{app_path}/shared/tmp/sockets/unicorn.sock", :backlog => 64
+
 
 # logging
 stderr_path "log/unicorn.stderr.log"
