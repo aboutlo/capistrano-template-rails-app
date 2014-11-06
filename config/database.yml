@@ -4,10 +4,10 @@ default: &default
 
 development:
   <<: *default
-  database: finsight
+  database: myapp
   host: localhost
 
 test:
   <<: *default
-  database: finsight_test
+  database: myapp_test
   host: localhost
