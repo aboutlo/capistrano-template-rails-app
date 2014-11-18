@@ -1,7 +1,7 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
 
-set :application, 'myapp' #app must be configured on server
+set :application, 'simple_app' #app must be configured on server
 
 set :repo_url, "git@github.com:aboutlo/capistrano-template-rails-app.git"
 
