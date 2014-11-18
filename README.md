@@ -1,10 +1,12 @@
 # README
 
-Simple multi theatre (vagrant, staging, production) Rails 4.1.6 with PostgreSQL
+Simple multi environment (vagrant, testing, staging, production) Rails 4.1.6 app with PostgreSQL
 
 ## Setup
-- Change `deploy.rb` application name
 - Checkout and configure vagrant box <https://github.com/aboutlo/ansible-rails-app-example>
+- Change in `deploy.rb` the application name
+- Change in `deploy/testing|staging|produciton.rb` the server ip or dns name
+
   
 ## Deploy
 
@@ -12,6 +14,9 @@ Simple multi theatre (vagrant, staging, production) Rails 4.1.6 with PostgreSQL
 
 It deploys to 192.168.33.10 
 
-## TODO
-- cap staging deploy (ec2)
-- cap production deploy (ec2)
+    cap testing|staging|production deploy
+
+It deploys to an ec2 istance tagged as `testing_web` | `staging_web` | `production`  
+
+TODO
+- https://github.com/douglasjarquin/capistrano-ec2tag
