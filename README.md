@@ -5,7 +5,9 @@ Simple multi environment (vagrant, testing, staging, production) Rails 4.1.6 app
 ## Setup
 - Checkout and configure vagrant box <https://github.com/aboutlo/ansible-rails-app-example>
 - Change in `deploy.rb` the application name
+- Change in `database.yml` the database name using the applicaito name 
 - Change in `deploy/testing|staging|produciton.rb` the server ip or dns name
+
 
   
 ## Deploy

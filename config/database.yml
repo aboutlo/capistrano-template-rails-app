@@ -4,10 +4,10 @@ default: &default
 
 development:
   <<: *default
-  database: myapp
+  database: simple_app
   host: localhost
 
 test:
   <<: *default
-  database: myapp_test
+  database: simple_app_test
   host: localhost
